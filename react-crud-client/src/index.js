@@ -6,6 +6,7 @@ import { Router, browserHistory } from "react-router";
 import { syncHistoryWithStore } from "react-router-redux";
 import configureStore from "./contexts/store/configureStore";
 import routes from "./routes";
+import "./styles/main.css";
 
 const store = configureStore();
 const history = syncHistoryWithStore(browserHistory, store);
