@@ -1,6 +1,7 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import { Link } from "react-router";
 import NewPostForm from "./NewPostForm";
+import "../styles/App.css";
 
 export default class App extends Component {
   constructor(props) {
@@ -31,31 +32,20 @@ export default class App extends Component {
     const appState = this.props.mappedAppState;
 
     return (
-      <div>
-        <div className="customNav">
-          <div>
-            <div>
-              <a href="/">Posts</a>
-            </div>
-          </div>
-          <div>
-            <div>
-              <Link
-                to={{ pathname: "/", query: {} }}
-                onClick={this.toggleAddPost}
-              >
-                <div>
-                  <button eventkey={1}>Create Post</button>
-                </div>
-              </Link>
-            </div>
-          </div>
+      <Fragment>
+        <div className="header">
+          <a href="/">
+            <h2>Posts</h2>
+          </a>
+          <Link to={{ pathname: "/", query: {} }} onClick={this.toggleAddPost}>
+            <button eventkey={1}>Create Post</button>
+          </Link>
         </div>
-        <div className="container">
+        <div className="app-container">
           {appState.showAddPost && <NewPostForm addPost={this.addPost} />}
-          {this.props.children}
         </div>
-      </div>
+        <div className="app-container">{this.props.children}</div>
+      </Fragment>
     );
   }
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import { FormGroup, ControlLabel, FormControl, Button } from "react-bootstrap";
+import "../styles/PostEditForm.css";
 
 const PostEditForm = props => {
   return (
@@ -34,7 +35,7 @@ const PostEditForm = props => {
         </div>
       </div>
       <FormGroup>
-        <Button type="submit" bsStyle="success" bsSize="large" block>
+        <Button type="submit" className="submit-button">
           Submit
         </Button>
       </FormGroup>

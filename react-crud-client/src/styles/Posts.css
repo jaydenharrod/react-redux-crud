@@ -1,0 +1,59 @@
+.post-container {
+  width: 100%;
+  background-color: #fff;
+  margin-top: 24px;
+  border-radius: 4px;
+}
+
+.posts {
+  height: 64px;
+  padding: 18px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+  background-color: #fff;
+}
+
+.posts:hover {
+  clear: both;
+  background-color: #9eebcf;
+}
+
+.button-edit {
+  background-color: #001b44;
+  color: #fff;
+  border: none;
+  height: 32px;
+  margin-right: 18px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.button-edit:hover {
+  background-color: #00449e;
+  color: white;
+  border: none;
+  height: 32px;
+  margin-right: 18px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.button-delete {
+  background-color: #e7040f;
+  color: #fff;
+  border: none;
+  height: 32px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.button-delete:hover {
+  background-color: #ff4136;
+  color: white;
+  border: none;
+  height: 32px;
+  padding-left: 8px;
+  padding-right: 8px;
+}

@@ -1,6 +1,7 @@
 import React from "react";
-import { Alert, Glyphicon, Button, Modal } from "react-bootstrap";
+import { Alert, Button, Modal } from "react-bootstrap";
 import PostEditForm from "./PostEditForm";
+import "../styles/Posts.css";
 
 export default class Posts extends React.Component {
   constructor(props) {
@@ -55,39 +56,32 @@ export default class Posts extends React.Component {
     const data = this.props.mappedPostState.posts;
     const editPost = postState.postToEdit;
     return (
-      <div className="col-md-12">
-        <h3 className="centerAlign">Posts</h3>
+      <div className="post-container">
         {!posts && postState.isFetching && <p>Loading posts....</p>}
         {posts &&
           posts.length > 0 &&
           !postState.isFetching && (
-            <table className="table booksTable">
-              <tbody>
-                {data.map((data, i) => (
-                  <tr key={i}>
-                    <td>{data.postTitle}</td>
-                    <td className="textCenter">
-                      <Button
-                        onClick={() => this.showEditModal(data)}
-                        bsStyle="info"
-                        bsSize="xsmall"
-                      >
-                        <Glyphicon glyph="pencil" />
-                      </Button>
-                    </td>
-                    <td className="textCenter">
-                      <Button
-                        onClick={() => this.showDeleteModal(data)}
-                        bsStyle="danger"
-                        bsSize="xsmall"
-                      >
-                        <Glyphicon glyph="trash" />
-                      </Button>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+            <div>
+              {data.map((data, i) => (
+                <div key={i} className="posts">
+                  <h4>{data.postTitle}</h4>
+                  <div>
+                    <button
+                      className="button-edit"
+                      onClick={() => this.showEditModal(data)}
+                    >
+                      Edit
+                    </button>
+                    <button
+                      className="button-delete"
+                      onClick={() => this.showDeleteModal(data)}
+                    >
+                      Delete
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </div>
           )}
         <Modal
           show={postState.showEditModal}
