@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import * as postActions from "../contexts/actions/postActions";
-import Posts from "../components/Posts";
+import EditPost from "../components/EditPost";
 
 const mapStateToProps = (state, ownProps) => {
   return {
@@ -11,9 +11,8 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = dispatch => {
   return {
     fetchPosts: () => dispatch(postActions.fetchPosts()),
-    mappedDeletePost: postToDelete =>
-      dispatch(postActions.deletePost(postToDelete))
+    mappedEditPost: postToEdit => dispatch(postActions.editPost(postToEdit))
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Posts);
+export default connect(mapStateToProps, mapDispatchToProps)(EditPost);

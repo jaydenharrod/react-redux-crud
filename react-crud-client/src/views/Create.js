@@ -1,7 +1,6 @@
 import { connect } from "react-redux";
-import * as appActions from "../contexts/actions/appActions";
 import * as postActions from "../contexts/actions/postActions";
-import App from "../components/App";
+import CreatePost from "../components/CreatePost";
 
 const mapStateToProps = state => {
   return {
@@ -11,9 +10,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    mappedToggleAddPost: () => dispatch(appActions.toggleAddPost()),
     mappedAddPost: post => dispatch(postActions.addNewPost(post))
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(CreatePost);

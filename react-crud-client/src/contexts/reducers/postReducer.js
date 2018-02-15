@@ -4,9 +4,7 @@ const INITIAL_STATE = {
   isFetching: false,
   error: null,
   successMsg: null,
-  showDeleteModal: false,
   postToDelete: null,
-  showEditModal: false,
   postToEdit: null,
   newPost: null
 };
@@ -21,9 +19,7 @@ export const postReducer = (currentState = INITIAL_STATE, action) => {
         isFetching: true,
         error: null,
         successMsg: null,
-        showDeleteModal: false,
         postToDelete: null,
-        showEditModal: false,
         postToEdit: null
       };
 
@@ -35,9 +31,7 @@ export const postReducer = (currentState = INITIAL_STATE, action) => {
         isFetching: false,
         error: null,
         successMsg: action.message,
-        showDeleteModal: false,
         postToDelete: null,
-        showEditModal: false,
         postToEdit: null
       };
 
@@ -49,9 +43,7 @@ export const postReducer = (currentState = INITIAL_STATE, action) => {
         isFetching: false,
         error: action.error,
         successMsg: null,
-        showDeleteModal: false,
         postToDelete: null,
-        showEditModal: false,
         postToEdit: null
       };
 
@@ -63,9 +55,7 @@ export const postReducer = (currentState = INITIAL_STATE, action) => {
         isFetching: true,
         error: null,
         successMsg: null,
-        showDeleteModal: false,
         postToDelete: null,
-        showEditModal: false,
         postToEdit: null
       };
 
@@ -77,9 +67,7 @@ export const postReducer = (currentState = INITIAL_STATE, action) => {
         isFetching: false,
         error: null,
         successMsg: action.message,
-        showDeleteModal: false,
         postToDelete: null,
-        showEditModal: false,
         postToEdit: null
       };
 
@@ -91,9 +79,7 @@ export const postReducer = (currentState = INITIAL_STATE, action) => {
         isFetching: false,
         error: action.error,
         successMsg: null,
-        showDeleteModal: false,
         postToDelete: null,
-        showEditModal: false,
         postToEdit: null
       };
 
@@ -105,9 +91,7 @@ export const postReducer = (currentState = INITIAL_STATE, action) => {
         isFetching: true,
         error: null,
         successMsg: null,
-        showDeleteModal: false,
         postToDelete: null,
-        showEditModal: false,
         postToEdit: null,
         newPost: action.post
       };
@@ -120,9 +104,7 @@ export const postReducer = (currentState = INITIAL_STATE, action) => {
         isFetching: true,
         error: action.error,
         successMsg: null,
-        showDeleteModal: false,
         postToDelete: null,
-        showEditModal: false,
         postToEdit: null,
         newPost: null
       };
@@ -135,9 +117,7 @@ export const postReducer = (currentState = INITIAL_STATE, action) => {
         isFetching: false,
         error: null,
         successMsg: action.message,
-        showDeleteModal: false,
         postToDelete: null,
-        showEditModal: false,
         postToEdit: null,
         newPost: action.post
       };
@@ -151,9 +131,7 @@ export const postReducer = (currentState = INITIAL_STATE, action) => {
         isFetching: false,
         error: null,
         successMsg: null,
-        showDeleteModal: false,
         postToDelete: null,
-        showEditModal: true,
         postToEdit: action.post,
         newPost: null
       };
@@ -166,9 +144,7 @@ export const postReducer = (currentState = INITIAL_STATE, action) => {
         isFetching: false,
         error: null,
         successMsg: null,
-        showDeleteModal: false,
         postToDelete: null,
-        showEditModal: false,
         postToEdit: null,
         newPost: null
       };
@@ -181,9 +157,7 @@ export const postReducer = (currentState = INITIAL_STATE, action) => {
         isFetching: true,
         error: null,
         successMsg: null,
-        showDeleteModal: false,
         postToDelete: null,
-        showEditModal: true,
         postToEdit: action.post,
         newPost: null
       };
@@ -202,9 +176,7 @@ export const postReducer = (currentState = INITIAL_STATE, action) => {
         isFetching: false,
         error: null,
         successMsg: action.message,
-        showDeleteModal: false,
         postToDelete: null,
-        showEditModal: true,
         postToEdit: action.post,
         newPost: null
       };
@@ -217,9 +189,7 @@ export const postReducer = (currentState = INITIAL_STATE, action) => {
         isFetching: false,
         error: action.error,
         successMsg: null,
-        showDeleteModal: false,
         postToDelete: null,
-        showEditModal: true,
         postToEdit: currentState.postToEdit,
         newPost: null
       };
@@ -232,9 +202,7 @@ export const postReducer = (currentState = INITIAL_STATE, action) => {
         isFetching: true,
         error: null,
         successMsg: null,
-        showDeleteModal: true,
         postToDelete: action.post,
-        showEditModal: false,
         postToEdit: null,
         newPost: null
       };
@@ -250,9 +218,7 @@ export const postReducer = (currentState = INITIAL_STATE, action) => {
         isFetching: false,
         error: null,
         successMsg: action.message,
-        showDeleteModal: true,
         postToDelete: null,
-        showEditModal: false,
         postToEdit: null,
         newPost: null
       };
@@ -265,9 +231,7 @@ export const postReducer = (currentState = INITIAL_STATE, action) => {
         isFetching: false,
         error: action.error,
         successMsg: null,
-        showDeleteModal: true,
         postToDelete: null,
-        showEditModal: false,
         postToEdit: null,
         newPost: null
       };
@@ -280,9 +244,7 @@ export const postReducer = (currentState = INITIAL_STATE, action) => {
         isFetching: false,
         error: null,
         successMsg: null,
-        showDeleteModal: true,
         postToDelete: action.post,
-        showEditModal: false,
         postToEdit: null,
         newPost: null
       };
@@ -295,9 +257,7 @@ export const postReducer = (currentState = INITIAL_STATE, action) => {
         isFetching: false,
         error: null,
         successMsg: null,
-        showDeleteModal: false,
         postToDelete: null,
-        showEditModal: false,
         postToEdit: null,
         newPost: null
       };
