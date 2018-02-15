@@ -6,7 +6,7 @@
 }
 
 .posts {
-  height: 64px;
+  height: 42px;
   padding: 18px;
   align-items: center;
   display: flex;
@@ -17,11 +17,11 @@
 
 .posts:hover {
   clear: both;
-  background-color: #9eebcf;
+  background-color: #f4f4f4;
 }
 
 .button-edit {
-  background-color: #001b44;
+  background-color: #353535;
   color: #fff;
   border: none;
   height: 32px;
@@ -31,7 +31,7 @@
 }
 
 .button-edit:hover {
-  background-color: #00449e;
+  background-color: #565656;
   color: white;
   border: none;
   height: 32px;
@@ -41,18 +41,18 @@
 }
 
 .button-delete {
-  background-color: #e7040f;
-  color: #fff;
-  border: none;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #000;
   height: 32px;
   padding-left: 8px;
   padding-right: 8px;
 }
 
 .button-delete:hover {
-  background-color: #ff4136;
-  color: white;
-  border: none;
+  background-color: #ffdfdf;
+  border: 1px solid #e7040f;
+  color: #e7040f;
   height: 32px;
   padding-left: 8px;
   padding-right: 8px;

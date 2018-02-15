@@ -7,7 +7,6 @@ export const toggleAddBook = () => {
 };
 
 export const addNewPost = post => {
-  console.log(post);
   return dispatch => {
     dispatch(addNewPostRequest(post));
     return fetch(apiUrl, {
@@ -16,7 +15,6 @@ export const addNewPost = post => {
     }).then(response => {
       if (response.ok) {
         response.json().then(data => {
-          console.log(data.post);
           dispatch(addNewPostRequestSuccess(data.post, data.message));
         });
       } else {
@@ -131,19 +129,6 @@ export const fetchPostFailed = error => {
   };
 };
 
-export const showEditModal = postToEdit => {
-  return {
-    type: "SHOW_EDIT_MODAL",
-    post: postToEdit
-  };
-};
-
-export const hideEditModal = () => {
-  return {
-    type: "HIDE_EDIT_MODAL"
-  };
-};
-
 export const editPost = post => {
   return dispatch => {
     dispatch(editPostRequest(post));
@@ -223,18 +208,5 @@ export const deletePostFailed = error => {
   return {
     type: "DELETE_POST_FAILED",
     error
-  };
-};
-
-export const showDeleteModal = postToDelete => {
-  return {
-    type: "SHOW_DELETE_MODAL",
-    post: postToDelete
-  };
-};
-
-export const hideDeleteModal = () => {
-  return {
-    type: "HIDE_DELETE_MODAL"
   };
 };
